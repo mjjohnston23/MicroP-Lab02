@@ -1,1 +1,0 @@
-Blinkenlights like Christmas up in dis bitch.
