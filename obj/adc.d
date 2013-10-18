@@ -40,3 +40,4 @@
 .\obj\adc.o: src\gpio_example.h
 .\obj\adc.o: src\tempStatus.h
 .\obj\adc.o: src\tempFilter.h
+.\obj\adc.o: src\leds.h

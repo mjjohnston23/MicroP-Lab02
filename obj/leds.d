@@ -37,3 +37,5 @@
 .\obj\leds.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\obj\leds.o: .\STM32F4xx_StdPeriph_Driver\inc\misc.h
 .\obj\leds.o: src\gpio_example.h
+.\obj\leds.o: src\leds.h
+.\obj\leds.o: src\tempStatus.h
