@@ -12,7 +12,8 @@
 #include "tempFilter.h"
 #include "tempStatus.h"
 #include "handleSysTick.h"
-
+#include "mode.h"
+#include "pulse.h"
 
 
 
@@ -37,8 +38,17 @@ int main() {
 		//printf("tick %d ", counter);
 		counter++;
 		resetTick();
-		acquireADCValue();
-	
+		
+		buttonPushed();
+		//printf("mode: %d", activeMode);
+		
+		if (activeMode == temp){
+			acquireADCValue();
+		}
+		else{
+			changeLeds();
+		}
+		
 		
 	}
 	
@@ -60,6 +70,11 @@ void mainPreamble() {
 	//Get the LEDs running
 	startLeds();
 	
+	//startup in temp sensing mode
+	initializeMode();
+	
+	//startup GPIO for user button
+	initializeButton();
 		
 	// Sets the SysTick delay needed to sample the ADC at the required rate.
 	uint32_t result = SysTick_Config(SystemCoreClock / acquiringFreq);

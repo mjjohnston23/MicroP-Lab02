@@ -5,6 +5,8 @@
 #include "gpio_example.h"
 #include "leds.h"
 #include "tempStatus.h"
+#include "mode.h"
+#include "pulse.h"
 
 /**
  * Variables needed for cool LED action
@@ -30,8 +32,15 @@ void startLeds(){
    gpio_init_s.GPIO_PuPd = GPIO_PuPd_NOPULL;
    GPIO_Init(GPIOD, &gpio_init_s);
 	
-	activeLed = top;
-	switchLed();
+	if (activeMode == temp){
+			activeLed = top;
+		switchLed();
+	}
+	else {
+		//we are in pulsing mode
+		startPulse();
+	}
+	
 }
 
 void ledState(){

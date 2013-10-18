@@ -477,6 +477,26 @@
               <FileType>5</FileType>
               <FilePath>.\src\adc.h</FilePath>
             </File>
+            <File>
+              <FileName>mode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\mode.c</FilePath>
+            </File>
+            <File>
+              <FileName>pulse.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\pulse.c</FilePath>
+            </File>
+            <File>
+              <FileName>mode.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\mode.h</FilePath>
+            </File>
+            <File>
+              <FileName>pulse.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\pulse.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

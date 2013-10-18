@@ -43,3 +43,5 @@
 .\obj\main.o: src\tempFilter.h
 .\obj\main.o: src\tempStatus.h
 .\obj\main.o: src\handleSysTick.h
+.\obj\main.o: src\mode.h
+.\obj\main.o: src\pulse.h

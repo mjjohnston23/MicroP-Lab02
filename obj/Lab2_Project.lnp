@@ -8,6 +8,8 @@
 ".\obj\main.o"
 ".\obj\tempfilter.o"
 ".\obj\tempstatus.o"
+".\obj\mode.o"
+".\obj\pulse.o"
 ".\obj\misc.o"
 ".\obj\stm32f4xx_adc.o"
 ".\obj\stm32f4xx_can.o"

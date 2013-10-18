@@ -39,3 +39,5 @@
 .\obj\leds.o: src\gpio_example.h
 .\obj\leds.o: src\leds.h
 .\obj\leds.o: src\tempStatus.h
+.\obj\leds.o: src\mode.h
+.\obj\leds.o: src\pulse.h

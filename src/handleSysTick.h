@@ -10,7 +10,7 @@
  * variable.
 */
 extern volatile uint32_t tick;
-extern const uint32_t acquiringFreq; //Sampling Rate is 20 Hz
+extern uint32_t acquiringFreq; //Sampling Rate is 20 Hz for temp, we will use 1 kHz for pwm switching. 
 
 void resetTick(void);
 void SysTick_Handler(void);

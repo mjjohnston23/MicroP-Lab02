@@ -75,7 +75,7 @@ I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
 F (.\src\gpio_example.h)(0x5255C22C)()
-F (.\src\adc.c)(0x52608559)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\adc.o --omf_browse .\obj\adc.crf --depend .\obj\adc.d)
+F (.\src\adc.c)(0x5260CA3D)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\adc.o --omf_browse .\obj\adc.crf --depend .\obj\adc.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx.h)(0x5255C22C)
@@ -112,11 +112,12 @@ I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\adc.h)(0x52608497)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\adc.h)(0x5260B540)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\gpio_example.h)(0x5255C22C)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x52608605)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260868A)
-F (.\src\handleSysTick.c)(0x526076B8)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\handlesystick.o --omf_browse .\obj\handlesystick.crf --depend .\obj\handlesystick.d)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x5260CAE5)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260C1FE)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\leds.h)(0x5260C948)
+F (.\src\handleSysTick.c)(0x5260D9EB)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\handlesystick.o --omf_browse .\obj\handlesystick.crf --depend .\obj\handlesystick.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx.h)(0x5255C22C)
@@ -153,13 +154,8 @@ I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\gpio_example.h)(0x5255C22C)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\adc.h)(0x52608497)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\leds.h)(0x5260868E)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260868A)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x52608605)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\handleSysTick.h)(0x52608600)
-F (.\src\leds.c)(0x526070F4)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\leds.o --omf_browse .\obj\leds.crf --depend .\obj\leds.d)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\handleSysTick.h)(0x5260B21A)
+F (.\src\leds.c)(0x5260D9FE)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\leds.o --omf_browse .\obj\leds.crf --depend .\obj\leds.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx.h)(0x5255C22C)
@@ -197,7 +193,9 @@ I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\gpio_example.h)(0x5255C22C)
-F (.\src\main.c)(0x526077DB)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\leds.h)(0x5260C948)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x5260CAE5)
+F (.\src\main.c)(0x5260DE13)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx.h)(0x5255C22C)
@@ -235,12 +233,12 @@ I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\gpio_example.h)(0x5255C22C)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\adc.h)(0x52608497)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\leds.h)(0x5260868E)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260868A)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x52608605)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\handleSysTick.h)(0x52608600)
-F (.\src\tempFilter.c)(0x52608657)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\tempfilter.o --omf_browse .\obj\tempfilter.crf --depend .\obj\tempfilter.d)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\adc.h)(0x5260B540)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\leds.h)(0x5260C948)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260C1FE)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x5260CAE5)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\handleSysTick.h)(0x5260B21A)
+F (.\src\tempFilter.c)(0x5260C2C3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\tempfilter.o --omf_browse .\obj\tempfilter.crf --depend .\obj\tempfilter.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx.h)(0x5255C22C)
@@ -277,12 +275,14 @@ I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260868A)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x52608605)
-F (.\src\tempStatus.c)(0x526085E6)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\tempstatus.o --omf_browse .\obj\tempstatus.crf --depend .\obj\tempstatus.d)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x52608605)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
-I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260C1FE)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x5260CAE5)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\adc.h)(0x5260B540)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\gpio_example.h)(0x5255C22C)
+F (.\src\tempStatus.c)(0x5260CBF4)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\tempstatus.o --omf_browse .\obj\tempstatus.crf --depend .\obj\tempstatus.d)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempStatus.h)(0x5260CAE5)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx_conf.h)(0x5255C22C)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx.h)(0x5255C22C)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4.h)(0x51C85E0A)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C86004)
@@ -290,8 +290,6 @@ I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x51C85E0A)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x51C85E0A)
 I (C:\Keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x51C85E0A)
 I (C:\Keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x51C858A8)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx_conf.h)(0x5255C22C)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5255C226)
@@ -317,12 +315,20 @@ I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5255C228)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
-I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260868A)
-F (.\src\handleSysTick.h)(0x52608600)()
-F (.\src\leds.h)(0x5260868E)()
-F (.\src\tempFilter.h)(0x5260868A)()
-F (.\src\tempStatus.h)(0x52608605)()
-F (.\src\adc.h)(0x52608497)()
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\tempFilter.h)(0x5260C1FE)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\adc.h)(0x5260B540)
+I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\gpio_example.h)(0x5255C22C)
+F (.\src\handleSysTick.h)(0x5260D954)()
+F (.\src\leds.h)(0x5260C948)()
+F (.\src\tempFilter.h)(0x5260C1FE)()
+F (.\src\tempStatus.h)(0x5260CAE5)()
+F (.\src\adc.h)(0x5260B540)()
+F (.\src\mode.c)(0x5260DCDC)()
+F (.\src\pulse.c)(0x5260D6FB)()
+F (.\src\mode.h)(0x5260DD15)()
+F (.\src\pulse.h)(0x5260D6FC)()
 F (.\STM32F4xx_StdPeriph_Driver\src\misc.c)(0x5255C22A)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\STM32F4xx_StdPeriph_Driver\inc --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DHSE_VALUE="8000000" -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\obj\misc.o --omf_browse .\obj\misc.crf --depend .\obj\misc.d)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5255C226)
 I (C:\Users\CC-DEMO\Documents\GitHub\MicroP-Lab02\src\stm32f4xx.h)(0x5255C22C)

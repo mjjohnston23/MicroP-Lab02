@@ -4,6 +4,6 @@
 void startLeds(void);
 void cwLeds(void);
 void ccwLeds(void);
-void switchLed();
-void ledState();
+void switchLed(void);
+void ledState(void);
 #endif
