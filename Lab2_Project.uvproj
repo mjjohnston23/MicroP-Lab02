@@ -403,11 +403,6 @@
               <FilePath>.\src\fputc_debug.c</FilePath>
             </File>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\main.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\stm32f4xx.h</FilePath>
@@ -426,6 +421,61 @@
               <FileName>gpio_example.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\gpio_example.h</FilePath>
+            </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>handleSysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\handleSysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>leds.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\leds.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>tempFilter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\tempFilter.c</FilePath>
+            </File>
+            <File>
+              <FileName>tempStatus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\tempStatus.c</FilePath>
+            </File>
+            <File>
+              <FileName>handleSysTick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\handleSysTick.h</FilePath>
+            </File>
+            <File>
+              <FileName>leds.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\leds.h</FilePath>
+            </File>
+            <File>
+              <FileName>tempFilter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\tempFilter.h</FilePath>
+            </File>
+            <File>
+              <FileName>tempStatus.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\tempStatus.h</FilePath>
+            </File>
+            <File>
+              <FileName>adc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\adc.h</FilePath>
             </File>
           </Files>
         </Group>

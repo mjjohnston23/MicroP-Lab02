@@ -37,3 +37,9 @@
 .\obj\main.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\obj\main.o: .\STM32F4xx_StdPeriph_Driver\inc\misc.h
 .\obj\main.o: src\gpio_example.h
+.\obj\main.o: src\adc.h
+.\obj\main.o: src\gpio_example.h
+.\obj\main.o: src\leds.h
+.\obj\main.o: src\tempFilter.h
+.\obj\main.o: src\tempStatus.h
+.\obj\main.o: src\handleSysTick.h
