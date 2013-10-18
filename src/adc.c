@@ -58,7 +58,7 @@ void acquireADCValue() {
 	ADC_output = ADC_GetConversionValue(ADC1);
 	
 	temperatureInCelsius = getCelsius(ADC_output);
-	
+	//printf("\n%d", temperatureInCelsius);
 	
 	addToFilter();
 	checkTempStatus();
