@@ -6,8 +6,9 @@
 
 
 
-uint32_t getCelsius(uint32_t vSense);
+uint32_t getCelsius(uint16_t adcIn);
 
-extern void checkTempStatus();
+extern void checkTempStatus(void);
+extern int32_t deviation;
 
 #endif

@@ -12,7 +12,7 @@
 extern volatile uint32_t tick;
 extern const uint32_t acquiringFreq; //Sampling Rate is 20 Hz
 
-void resetTick();
-void SysTick_Handler();
+void resetTick(void);
+void SysTick_Handler(void);
 
 #endif

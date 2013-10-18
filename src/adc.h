@@ -8,9 +8,9 @@
 #include "gpio_example.h"
 
 
-void configureADC();
-void acquireADCValue();
+void configureADC(void);
+void acquireADCValue(void);
 
-extern uint32_t ADC_output;
+extern uint16_t ADC_output;
 extern uint32_t temperatureInCelsius;
 #endif

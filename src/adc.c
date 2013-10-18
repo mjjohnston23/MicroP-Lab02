@@ -5,8 +5,9 @@
 #include "adc.h"
 #include "tempStatus.h"
 #include "tempFilter.h"
+#include "leds.h"
 
-uint32_t ADC_output;
+uint16_t ADC_output;
 uint32_t temperatureInCelsius;
 
 /**
@@ -29,6 +30,10 @@ void configureADC() {
 	adc_init_s.ADC_DataAlign = ADC_DataAlign_Right;
 	adc_init_s.ADC_NbrOfConversion = 1;
 	ADC_Init(ADC1, &adc_init_s);
+	ADC_Cmd(ADC1, ENABLE);
+	
+	ADC_TempSensorVrefintCmd(ENABLE);	
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_16, 1, ADC_SampleTime_480Cycles);
 }
 
 
@@ -36,19 +41,20 @@ void configureADC() {
  * Does shit
 */
 void acquireADCValue() {
-	ADC_Cmd(ADC1, ENABLE);
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_12, 1, ADC_SampleTime_480Cycles);
+	
 	ADC_SoftwareStartConv(ADC1);
 	while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET); //Could be through interrupts (Later)
 	ADC_ClearFlag(ADC1, ADC_FLAG_EOC);
 	ADC_GetConversionValue(ADC1); // Result available in ADC1->DR
 	// Gets the value from the ADC.
 	ADC_output = ADC_GetConversionValue(ADC1);
-	printf("\n Output from ADC=%i", ADC_output);
+	//printf("\n Output from ADC=%i", ADC_output);
 	
 	temperatureInCelsius = getCelsius(ADC_output);
-	printf("\n Celsius=%i", temperatureInCelsius);
+	//printf("\n Celsius=%i", temperatureInCelsius);
 	
 	addToFilter();
 	checkTempStatus();
+	
+	ledState();
 }

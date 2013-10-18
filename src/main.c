@@ -34,7 +34,7 @@ int main() {
 	while (1) {
 		// Here we wait for the interrupt to happen.
 		while (!tick);
-		printf("tick %d ", counter);
+		//printf("tick %d ", counter);
 		counter++;
 		resetTick();
 		acquireADCValue();

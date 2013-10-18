@@ -6,22 +6,24 @@
 #include "tempFilter.h"
 #include "adc.h"
 
+uint32_t prevTemp = 0;
+int32_t deviation = 0;
 
 /**
  * Variables defined (Datasheet p.134) in the temperature formula (Reference Manual p.230) user to convert the
  * output from the ADC to actual temperature.
 */
-const float avg_Slope = 2.5;
+const float avg_Slope = 0.0025;
 const float v25 = 0.76;
 const uint32_t samplingTime = 15;
 const uint32_t celsiusBase = 25;
 
 /**
- * Returns the value in celsius based on the voltage input (taken from the ADC).
+ * Returns the value in celsius based on the 12-bit input (taken from the ADC).
  * This formula can be found in the reference manual at page 230.
 */
-uint32_t getCelsius(uint32_t vSense) {
-	return ((((uint32_t)vSense - v25) / avg_Slope) + celsiusBase);
+uint32_t getCelsius(uint16_t adcIn) { 
+	return (((3*((float)adcIn / 4096) - v25) / avg_Slope) + celsiusBase);
 }
 
 
@@ -29,14 +31,20 @@ uint32_t getCelsius(uint32_t vSense) {
  * compares the current temp versus the average of the filter, updates the trend if necessary
 */
 void checkTempStatus(){
-	if (temperatureInCelsius > (1.1 * getFilterAvg())){
+	if (prevFilterAvg < getFilterAvg()){
 		tempStatus = up;
+		deviation++;
 	}
-	else if (temperatureInCelsius < (0.9 * getFilterAvg())){
+	else if (prevFilterAvg > getFilterAvg()){
 		tempStatus = down;
+		deviation--;
 	}
 	else{
 		tempStatus = stable;
 	}
+	printf("\nFilterAvg: %d", getFilterAvg());
 	printf("\nStatus: %d", tempStatus);
+	printf("\nDeviation: %d", deviation);
 }
+
+
