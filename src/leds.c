@@ -1,3 +1,7 @@
+/**
+ * Authors: M. Johnston and J.S. Dery
+ * Handles led-related behaviour in temp sensing mode
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "stm32f4xx.h"
@@ -33,7 +37,8 @@ void startLeds(){
    GPIO_Init(GPIOD, &gpio_init_s);
 	
 	if (activeMode == temp){
-			activeLed = top;
+		//temp mode
+		activeLed = top;
 		switchLed();
 	}
 	else {
@@ -42,15 +47,17 @@ void startLeds(){
 	}
 	
 }
-
+/**
+ * determine whether we need to rotate the active light depending on temp deviation from previous rotation
+*/
 void ledState(){
 	if (deviation > 1){
 		cwLeds();
-		deviation = 0;
+		deviation = 0;//we have gone +2 deg C, reset deviation
 	}
 	else if (deviation < -1){
 		ccwLeds();
-		deviation = 0;
+		deviation = 0;//we have gone -2 deg C, reset deviation
 	}
 	else{
 		//do nothing
@@ -76,6 +83,9 @@ void cwLeds(){
 	}
 	switchLed();
 }
+/**
+ * rotates the active LED in a counter-clockwise manner (decrease in temp)
+*/
 void ccwLeds(){
 		if (activeLed == top){
 		activeLed = left;
@@ -91,7 +101,9 @@ void ccwLeds(){
 	}
 	switchLed();
 }
-
+/**
+ * activates the correct led
+*/
 void switchLed(){
 	GPIO_Write(GPIOD, 0x0); //turn off the leds
 	if (activeLed == top){

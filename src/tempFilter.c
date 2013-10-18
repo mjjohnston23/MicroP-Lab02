@@ -1,3 +1,7 @@
+/**
+ * Authors: M. Johnston and J.S. Dery
+ * Handles moving-average temperature filter
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "stm32f4xx.h"

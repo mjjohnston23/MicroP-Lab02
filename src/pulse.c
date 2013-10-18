@@ -1,3 +1,7 @@
+/**
+ * Authors: M. Johnston and J.S. Dery
+ * Handles the pulsing led mode
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "stm32f4xx.h"
@@ -22,18 +26,26 @@ void startPulse(){
 	trend = dim;	
 	stepSize = (1 / pulseFreq)* (switchFreq / (2 * dutyCycle)); // =50 b/c 200 steps round trip
 }
+/**
+ * Called every switching cycle, determine what needs to be changed with the leds
+*/
 void changeLeds(){
 	if (trend == dim && dutyCycle == 0){		
+		//we are dimmed to minimum
 		trend = raise;
 		ledsOff();//redundancy check
 	}
 	else if(trend == raise && dutyCycle == 100){
+		//we are raised to maximum
 		trend = dim;
 		ledsOn();//redudancy check
 	}
 	else {
+		//we are in between max and min
 		if(tickCounter < stepSize){
+			//leds stay on
 			if (tickCounter > dutyCycle){ 
+				//T_on complete, time for T_off
 				ledsOff();
 			}
 			tickCounter++;
@@ -41,13 +53,14 @@ void changeLeds(){
 		else{//tickCounter == stepSize
 			tickCounter = 0;//reset tickCounter
 			ledsOn();
+			//we change duty cycle by 2% at at time b/c we have 2*50 steps to do a full cycle
 			if (trend == dim){
 				dutyCycle -= 2;
 			}
 			else{
 				dutyCycle += 2;
 			}
-			printf("\ndutyCycle: %d", dutyCycle);
+			//printf("\ndutyCycle: %d", dutyCycle);
 		}
 	}
 }

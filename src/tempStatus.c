@@ -1,3 +1,7 @@
+/**
+ * Authors: M. Johnston and J.S. Dery
+ * Handles temp conversion and temp status
+*/
 #include "tempStatus.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -42,6 +46,7 @@ void checkTempStatus(){
 	else{
 		tempStatus = stable;
 	}
+	//keep these printf statements to verify filter average in real time
 	printf("\nFilterAvg: %d", getFilterAvg());
 	printf("\nStatus: %d", tempStatus);
 	printf("\nDeviation: %d", deviation);

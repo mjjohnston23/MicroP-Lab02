@@ -1,3 +1,7 @@
+/**
+ * Authors: M. Johnston and J.S. Dery
+ * ADC and temp-sensing
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "stm32f4xx.h"
@@ -6,6 +10,10 @@
 #include "tempStatus.h"
 #include "tempFilter.h"
 #include "leds.h"
+
+/**
+ * Global variables related to the ADC
+*/
 
 uint16_t ADC_output;
 uint32_t temperatureInCelsius;
@@ -38,7 +46,7 @@ void configureADC() {
 
 
 /**
- * Does shit
+ * Reads the temp sensor with ADC, make it a useful value (deg C), add to the filter, see if the temp is changing, update leds
 */
 void acquireADCValue() {
 	
@@ -48,10 +56,9 @@ void acquireADCValue() {
 	ADC_GetConversionValue(ADC1); // Result available in ADC1->DR
 	// Gets the value from the ADC.
 	ADC_output = ADC_GetConversionValue(ADC1);
-	//printf("\n Output from ADC=%i", ADC_output);
 	
 	temperatureInCelsius = getCelsius(ADC_output);
-	//printf("\n Celsius=%i", temperatureInCelsius);
+	
 	
 	addToFilter();
 	checkTempStatus();

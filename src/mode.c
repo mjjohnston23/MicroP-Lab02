@@ -1,3 +1,7 @@
+/**
+ * Authors: M. Johnston and J.S. Dery
+ * Handles button-related shenanigans and mode-switching.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "stm32f4xx.h"
@@ -7,7 +11,7 @@
 #include "pulse.h"
 #include "leds.h"
 
-enum mode activeMode;
+enum mode activeMode;//either temp (sensing) or pulse (blinkenlights)
 
 /**
  * initializes the GPIO for the user button
@@ -50,27 +54,26 @@ void buttonPushed(){
 void toggleMode(){
 	if (activeMode == temp){
 		activeMode = pulse;
-		acquiringFreq = 10000;
-		uint32_t result = SysTick_Config(SystemCoreClock / acquiringFreq);
-
-		startPulse();
+		acquiringFreq = 10000; //set 
+		uint32_t result = SysTick_Config(SystemCoreClock / acquiringFreq); //update SysTick timer
+		startPulse(); //start max brightness
 	}
 	else{
 		activeMode = temp;
 		acquiringFreq = 20;
-		uint32_t result = SysTick_Config(SystemCoreClock / acquiringFreq);
-		startLeds();
+		uint32_t result = SysTick_Config(SystemCoreClock / acquiringFreq); //update SysTick timer
+		startLeds(); //start top led active
 	}
 }
 
 /**
- * provides a 250 ms debounce period
+ * provides a debounce period, timer length isn't that important, since we keep repeating until no longer pressed
 */
 void debounce(){
 	uint32_t timer = 0;
 	while (timer < 1000){
 		timer++;
 	}
-	printf("exited while loop");
+	//printf("exited while loop");
 }
 

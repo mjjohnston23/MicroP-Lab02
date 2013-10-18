@@ -1,5 +1,6 @@
 /**
- * Main class of ECSE-426 Lab02.
+ * Authors: M. Johnston and J.S. Dery
+ * Main file of ECSE-426 Lab02.
 */
 
 #include <stdio.h>
@@ -31,31 +32,27 @@ void mainPreamble();
 int main() {
 	mainPreamble();
 	
-	int counter = 0;
+	//int counter = 0;
 	while (1) {
 		// Here we wait for the interrupt to happen.
 		while (!tick);
 		//printf("tick %d ", counter);
-		counter++;
+		//counter++;
 		resetTick();
 		
+		//check to see if button is pushed
 		buttonPushed();
-		//printf("mode: %d", activeMode);
 		
+		//do stuff depending upon mode we're in
 		if (activeMode == temp){
 			acquireADCValue();
 		}
 		else{
 			changeLeds();
-		}
-		
-		
-	}
-	
-	return (0);
+		}		
+	}	
+	return (0);//return of main function
 }
-
-
 
 /**
  * Sets all the pre-conditions for the main method to execute properly.
@@ -84,7 +81,7 @@ void mainPreamble() {
 		printf("An error occured when setting the SYSTICK timer. Terminating the program now.");
 		exit(EXIT_FAILURE);
 	}
-	
+	//set up the ADC for temp sensing
 	configureADC();
 }
 
