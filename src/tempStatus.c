@@ -26,28 +26,31 @@ const uint32_t celsiusBase = 25;
  * Returns the value in celsius based on the 12-bit input (taken from the ADC).
  * This formula can be found in the reference manual at page 230.
 */
-uint32_t getCelsius(uint16_t adcIn) { 
+uint32_t getCelsius(uint16_t adcIn) {
 	return (((3*((float)adcIn / 4096) - v25) / avg_Slope) + celsiusBase);
 }
-
 
 /**
  * compares the current temp versus the average of the filter, updates the trend if necessary
 */
 void checkTempStatus(){
-	if (prevFilterAvg < getFilterAvg()){
+	// We compute the filter average once and use the computed value elsewhere in the code.
+	uint32_t actualFilteredAverage = getFilterAvg();
+	
+	// If we observe that the computed value is different than the previous average, we update the deviation properly.
+	if (prevFilterAvg < actualFilteredAverage){
 		tempStatus = up;
-		deviation++;
-	}
-	else if (prevFilterAvg > getFilterAvg()){
+		deviation += actualFilteredAverage - prevFilterAvg;
+	} else if (prevFilterAvg > actualFilteredAverage){
 		tempStatus = down;
-		deviation--;
+		deviation -= prevFilterAvg - actualFilteredAverage;
 	}
 	else{
 		tempStatus = stable;
 	}
+	
 	//keep these printf statements to verify filter average in real time
-	printf("\nFilterAvg: %d", getFilterAvg());
+	printf("\nFilterAvg: %d", actualFilteredAverage);
 	printf("\nStatus: %d", tempStatus);
 	printf("\nDeviation: %d", deviation);
 }

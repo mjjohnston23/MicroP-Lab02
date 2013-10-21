@@ -23,43 +23,60 @@ uint32_t temperatureInCelsius;
 */
 void configureADC() {
 	printf("configuring ADC");
+	
 	ADC_InitTypeDef adc_init_s;
 	ADC_CommonInitTypeDef adc_common_init_s;
+	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
 	adc_common_init_s.ADC_Mode = ADC_Mode_Independent;
+	// Sets the frequency of the ADC, smallest freq available.
 	adc_common_init_s.ADC_Prescaler = ADC_Prescaler_Div2;
-	adc_common_init_s.ADC_DMAAccessMode = ADC_DMAAccessMode_Disabled;
+	// Smallest possible delay.
 	adc_common_init_s.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_5Cycles;
+	// Initializes the ADC with the specified parameters in adc_common_init_s.
 	ADC_CommonInit(&adc_common_init_s);
+	
+	// Sets the ADC resolution to 12 bits.
 	adc_init_s.ADC_Resolution = ADC_Resolution_12b;
+	// The conversion is going to be on only one channel, so we set it to DISABLE.
 	adc_init_s.ADC_ScanConvMode = DISABLE;
-	adc_init_s.ADC_ContinuousConvMode = DISABLE;
+	
+	//adc_init_s.ADC_ContinuousConvMode = DISABLE;
 	adc_init_s.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None;
 	adc_init_s.ADC_DataAlign = ADC_DataAlign_Right;
-	adc_init_s.ADC_NbrOfConversion = 1;
+	//adc_init_s.ADC_NbrOfConversion = 1;
+	
 	ADC_Init(ADC1, &adc_init_s);
 	ADC_Cmd(ADC1, ENABLE);
 	
-	ADC_TempSensorVrefintCmd(ENABLE);	
+	// Wake up the temperature sensor on the board (else we won't be able to use it).
+	ADC_TempSensorVrefintCmd(ENABLE);
+	
 	ADC_RegularChannelConfig(ADC1, ADC_Channel_16, 1, ADC_SampleTime_480Cycles);
+	 
+	// Starts the ADC convertion for ADC1.
+	ADC_SoftwareStartConv(ADC1);
+	// We enable the convertion in a continuous mode in order to prevent the "ADC_SoftwareStartConv()"
+	// to be called on each time we want to read from the ADC.
+	ADC_ContinuousModeCmd(ADC1, ENABLE);
 }
-
 
 /**
  * Reads the temp sensor with ADC, make it a useful value (deg C), add to the filter, see if the temp is changing, update leds
 */
 void acquireADCValue() {
 	
-	ADC_SoftwareStartConv(ADC1);
-	while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET); //Could be through interrupts (Later)
+	// The while loop is present because we need the data to be ready before reading it.
+	// When the data is ready to be read, the flag will be set for ADC1.
+	while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
+	// Since we know that the data is ready, we can reset the flag for ADC1.
 	ADC_ClearFlag(ADC1, ADC_FLAG_EOC);
-	ADC_GetConversionValue(ADC1); // Result available in ADC1->DR
 	// Gets the value from the ADC.
 	ADC_output = ADC_GetConversionValue(ADC1);
-	
+	// Converts the reading from the ADC to actual degree celsius.
 	temperatureInCelsius = getCelsius(ADC_output);
-	//printf("\n%d", temperatureInCelsius);
 	
+	// Adds the computed value to the filter (moving average buffer).
 	addToFilter();
 	checkTempStatus();
 	

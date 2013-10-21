@@ -57,8 +57,7 @@ void toggleMode(){
 		acquiringFreq = 10000; //set 
 		uint32_t result = SysTick_Config(SystemCoreClock / acquiringFreq); //update SysTick timer
 		startPulse(); //start max brightness
-	}
-	else{
+	} else{
 		activeMode = temp;
 		acquiringFreq = 20;
 		uint32_t result = SysTick_Config(SystemCoreClock / acquiringFreq); //update SysTick timer
@@ -76,4 +75,3 @@ void debounce(){
 	}
 	//printf("exited while loop");
 }
-

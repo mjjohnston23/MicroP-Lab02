@@ -54,15 +54,10 @@ void ledState(){
 	if (deviation > 1){
 		cwLeds();
 		deviation = 0;//we have gone +2 deg C, reset deviation
-	}
-	else if (deviation < -1){
+	} else if (deviation < -1){
 		ccwLeds();
 		deviation = 0;//we have gone -2 deg C, reset deviation
-	}
-	else{
-		//do nothing
-	}
-		
+	}		
 }
 
 /**
@@ -119,6 +114,3 @@ void switchLed(){
 		GPIO_SetBits(GPIOD, GPIO_Pin_12);
 	}
 }
-	
-
-
